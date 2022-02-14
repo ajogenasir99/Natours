@@ -7,6 +7,10 @@
     box-shadow: $shadow-2;
     transition: transform .5s;
 
+    @include respond($tab-port) {
+        padding: 2rem;
+    }
+
     &__icon {
         font-size: 6rem;
         margin-bottom: .5rem;
@@ -14,11 +18,22 @@
         background-clip: text;
         -webkit-background-clip: text;
         color: transparent;
+
+        @include respond($tab-port) {
+            margin-bottom: 0;
+        }
+
     }
 
     &:hover {
         transform: translateY(-1.5rem) scale(1.05);
         box-shadow: $shadow-1;
+    }
+
+    &__text {
+        @include respond($tab-port) {
+            padding: 4rem 8rem;
+        }
     }
 
 }
